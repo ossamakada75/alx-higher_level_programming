@@ -1,3 +1,12 @@
-#!/usr/bin/node
-const count = process.argv.length;
-console.log(count === 2 ? 'No argument' : count === 3 ? 'Argument found' : 'Arguments found');
+#!/usr/bin/env node
+
+const argsCount = process.argv.length - 2; // Subtract 2 to exclude 'node' and the script filename
+
+if (argsCount === 0) {
+    console.log("No argument");
+} else if (argsCount === 1) {
+    console.log("Argument found");
+} else {
+    console.log("Arguments found");
+}
+
